@@ -1,7 +1,6 @@
 import numpy as np
 
 def half_sequence(number: int=1) ->int:
-
     count = 0
     number = np.random.randint(1,100)
 
@@ -13,7 +12,7 @@ def half_sequence(number: int=1) ->int:
     
     while number != predict_number:
         count+=1
-    #рамки поиска
+        # сужаем рамки поиска
         if number > predict_number:
             min = predict_number + 1    
         
@@ -21,6 +20,7 @@ def half_sequence(number: int=1) ->int:
             max = predict_number - 1
             
         predict_number = round((max + min ) / 2) # разбиваем по полам новые рамки поиска
+    
     #print(f'Число попыток: {count}')
     return count     
      
